@@ -41,6 +41,14 @@ app.route('/authors')
             if(tracker===_tracker){ console.log(data); res.json(data); }
         }); 
         
+    })
+
+    .put(function (req, res, next) {
+        next({ status: 405, error: 'not allowed' });
+    })
+
+    .delete(function (req, res, next) {
+        next({ status: 405, error: 'not allowed' });
     });
 
 app.route('/authors/:id')

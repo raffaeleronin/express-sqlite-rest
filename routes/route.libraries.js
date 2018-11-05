@@ -120,6 +120,14 @@ app.route('/libraries/:id/items')
         
         });  
         
+    })
+
+    .put(function (req, res, next) {
+        next({ status: 405, error: 'not allowed' });
+    })
+
+    .delete(function (req, res, next) {
+        next({ status: 405, error: 'not allowed' });
     });
 
 app.route('/libraries/:id/items/:book')
