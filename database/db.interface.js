@@ -1,5 +1,7 @@
 var uuidv4 = require('uuid/v4');
-var core = require('./db.core');
+const path = require('path');
+
+var core = require(path.join(__dirname, './db.core'));
 var e = core.e;
 
 e.emit('DB init');

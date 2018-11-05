@@ -1,8 +1,10 @@
 const express = require('express');
 var uuidv4 = require('uuid/v4');
 var validate = require('uuid-validate');
+const path = require('path');
+
 var app = express();
-var database = require('../database/db.interface');
+var database = require(path.join(__dirname, '../database/db.interface'));
 
 app.on('mount', function () {
     console.log(app.path() + ' -- mounted');
